@@ -1,0 +1,696 @@
+.popup {
+    width: 100%;
+    height: 100%;
+    @include position('fixed', $top: 0, $left: 0);
+    @include opacity('background', $black, 0.9);
+    display: none;
+    z-index: 999;
+
+    .wrapper-popup {
+        width: 100%;
+        height: 100%;
+        @include flex($align: center, $justify: center);
+        
+
+        .popup-content {
+            background-color: $white;
+            @include border-radius(5px);
+            @include position('relative');
+            box-sizing: border-box;
+            width: auto;
+            height: auto;
+            max-width: 95%;
+            max-height: 95%;
+            padding: 48px;
+
+            a.btn-close {
+                @include position('absolute', $top: 8px, $right: 8px);
+                width: 40px;
+                height: 40px;
+                background-color: $primary;
+                @include border-radius(5px);
+                color: transparent;
+
+                &:before {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    font-family: 'jec', sans-serif;
+                    content: '\E82E';
+                    font-style: normal;
+                    font-size: 18px;
+                    line-height: 64px;
+                    text-align: center;
+                    color: #fff;
+                }
+            }
+
+            .popup-message {
+                position: relative;
+                width: 100%;
+
+                h3 {
+                    width: 100%;
+                    text-align: center;
+                    margin: 0 0 32px 0;
+                }
+
+                p {
+                    margin: 0 0 16px 0;
+                    font-size: 16px;
+                    line-height: 28px;
+                    letter-spacing: 0.5px;
+                    text-align: center;
+                }
+
+                a.button-blue {
+                    width: 200px;
+                    margin: 0 auto;
+
+                    span {text-transform: none;}
+
+                    &.left-pos {
+                        margin-left: 0;
+                    }
+                }
+
+                .popup-header {
+                    position: relative;
+                    width: 100%;
+
+                    p {
+                        font-size: 16px;
+                        line-height: 20px;
+                        font-weight: 700;
+                        text-transform: uppercase;
+                        margin: 0 0;
+                        text-align: left;
+
+                        b {
+                            font-size: 30px;
+                            line-height: 40px;
+                            display: block;
+                            margin: 8px 0 0 0;
+                        }
+                    }
+                }
+
+                .popup-body {
+                    position: relative;
+                    width: 100%;
+                    margin: 32px 0 0 0;
+
+                    .wrapper-appointment-rate {
+                        position: relative;
+                        width: 100%;
+                        @include float-pos;
+
+                        .foto {
+                            float: left;
+                            width: 200px;
+
+                            .thumb {
+                                position: relative;
+                                padding-top: (200px / 200px) * 100%;
+                                width: 100%;
+                                overflow: hidden;
+                                @include border-radius(25px);
+                                @include box-shadow (0, 3px, 20px, 0,#000, $opacity: 0.16);
+
+                                img {
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    width: 100%;
+                                    height: 100%;
+                                    object-fit: contain;
+                                    object-position: center;
+                                }
+                            }
+
+                            .title {
+                                position: relative;
+                                width: 100%;
+                                text-align: center;
+                                font-size: 16px;
+                                line-height: 26px;
+                                font-weight: 700;
+                                text-transform: uppercase;
+                                margin: 16px 0 0 0;
+                            }
+                        }
+
+                        .desc {
+                            float: left;
+                            width: calc(100% - 200px);
+                            padding-left: 32px;
+
+                            .doctor {
+                                position: relative;
+                                width: 100%;
+                                text-align: left;
+                                font-size: 24px;
+                                line-height: 32px;
+                                font-weight: 700;
+                                margin: 0 0 16px 0;
+                            }
+
+                            .date-time {
+                                position: relative;
+                                width: 100%;
+                                @include float-pos;
+
+                                span {
+                                    float: left;
+                                    width: 50%;
+                                    text-align: left;
+                                    font-size: 24px;
+                                    line-height: 32px;
+                                    font-weight: 700;
+                                    text-transform: uppercase;
+                                    position: relative;
+
+                                    i.time {
+                                        position: relative;
+                                        display: inline-block;
+                                        width: auto;
+                                        margin-right: 0px;
+                                        position: relative;
+                                        width: 32px;
+                                        height: 32px;
+                                        vertical-align: top;
+
+                                        &:before {
+                                            position: absolute;
+                                            top: 50%;
+                                            left: 50%;
+                                            width: 18px;
+                                            height: 18px;
+                                            margin-top: -8px;
+                                            margin-left: -9px;
+                                            font-family: 'jec', sans-serif;
+                                            content: '\E907';
+                                            font-size: 18px;
+                                            line-height: 18px;
+                                            text-align: center;
+                                            color: $black;
+                                            font-style: normal;
+                                        }
+                                    }
+                                }
+                            }
+
+                            .info {
+                                position: relative;
+                                width: 100%;
+                                margin: 16px 0 0 0;
+                                padding: 16px 0 0 0;
+
+                                p {
+                                    position: relative;
+                                    width: 100%;
+                                    text-align: left;
+                                    font-size: 16px;
+                                    line-height: 28px;
+                                }
+
+                                &:before {
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    width: 100%;
+                                    height: 1px;
+                                    background: #E5E5E5;
+                                    content: '';
+                                }
+                            }
+                        }
+                    }
+
+                    form,
+                    .form {
+                        position: relative;
+                        width: 100%;
+
+                        .rows {
+                            margin: 0 0;
+
+                            .wrapper-sf {
+                                position: relative;
+                                width: 100%;
+                                padding: 32px 24px 24px 24px;
+                                @include border-radius(10px);
+                                background-color: #F9F9F9;
+                                @include float-pos;
+                                overflow: hidden;
+                                margin-bottom: 32px;
+
+                                .title {
+                                    float: left;
+                                    width: 100%;
+                                    margin-bottom: 16px;
+                                    color: $black;
+                                    text-transform: uppercase;
+                                    font-size: 14px;
+                                    line-break: 20px;
+                                    letter-spacing: 0;
+                                    padding: 0 8px;
+                                }
+
+                                .input-checkbox {
+                                    float: left;
+                                    width: auto;
+                                    padding: 8px 8px;
+
+                                    input[type="checkbox"] {
+                                        @include vendor('appearance', 'none');
+                                        display: block;
+                                        float: left;
+                                        margin: 0;
+                                        opacity: 0;
+                                        width: 100%;
+                                        z-index: -1;
+                                
+                                        & + label {
+                                            @include icon;
+                                            cursor: pointer;
+                                            display: inline-block;
+                                            letter-spacing: 0;
+                                            text-transform: none;
+                                            font-size: 16px;
+                                            line-height: 20px;
+                                            padding-left: 0px;
+                                            position: relative;
+                                            font-weight: 400;
+                                            margin: 0 0;
+                                            padding: 16px 16px;
+                                            background: transparent;
+                                            border: 1px solid #000;
+                                            color: #000;
+                                            @include border-radius(10px);
+                                            @include vendor('transition', (
+                                                'all #{_duration(transition)} ease-in-out 0.3s',
+                                            ));
+                                
+                                            &:before {
+                                                display: none;
+                                            }
+                                        }
+                                
+                                        &:checked + label {
+                                            background: #000;
+                                            color: #fff;
+                                            @include vendor('transition', (
+                                                'all #{_duration(transition)} ease-in-out 0.3s',
+                                            ));
+                                        }
+
+                                        &.green {
+
+                                            &:checked + label {
+                                                background: $green;
+                                                border-color: $green;
+                                                @include vendor('transition', (
+                                                    'all #{_duration(transition)} ease-in-out 0.3s',
+                                                ));
+                                            }
+                                        }
+
+                                        &.grey {
+
+                                            &:checked + label {
+                                                background: #A4A4A4;
+                                                @include vendor('transition', (
+                                                    'all #{_duration(transition)} ease-in-out 0.3s',
+                                                ));
+                                            }
+                                        }
+
+                                        &.blue {
+
+                                            &:checked + label {
+                                                background: $blue;
+                                                border-collapse: $blue;
+                                                @include vendor('transition', (
+                                                    'all #{_duration(transition)} ease-in-out 0.3s',
+                                                ));
+                                            }
+                                        }
+                                    }
+                                }
+
+                                &:last-of-type {margin-bottom: 0;}
+                            }
+                        }
+                    }
+
+                    .gallery {
+                        position: relative;
+                        width: 100%;
+
+                        .wrapper-gallery {
+                            position: relative;
+                            width: 100%;
+    
+                            .gallery-main {
+    
+                                .swiper-slide {
+                                    height: 500px;
+    
+                                    .foto {
+                                        position: relative;
+                                        display: block;
+                                        width: 768px;
+                                        margin: 0 auto;
+                                        height: 100%;
+    
+                                        img {
+                                            position: relative;
+                                            width: 100%;
+                                            height: 100%;
+                                            object-fit: cover;
+                                            object-position: center;
+    
+                                            @include border-radius(25px);
+                                        }
+                                    }
+                                }
+                            }
+    
+                            .g-thumbs {
+                                position: relative;
+                                width: 100%;
+                                padding: 0 48px;
+                                margin: 32px 0 0 0;
+    
+                                .gallery-thumbs {
+    
+                                    .foto {
+                                        height: 144px;
+    
+                                        img {
+                                            width: 100%;
+                                            height: 100%;
+                                            object-fit: cover;
+                                            object-position: center;
+                                            opacity: .2;
+                                            @include border-radius(15px);
+                                        }
+                                    }
+    
+                                    .swiper-slide-thumb-active {
+                                        
+                                        .foto {
+        
+                                            img {
+                                                opacity: 1;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+    
+                            .swiper-button-prev,
+                            .swiper-button-next {
+                                top: calc(100% - 64px);
+                                width: 32px;
+                                height: 64px;
+                                margin-top: 0;
+                                background-image: none;
+                                outline: none;
+                                display: none;
+    
+                                &:before {
+                                    width: 100%;
+                                    height: 100%;
+                                    display: block;
+                                    font-family: 'jec', sans-serif;
+                                    content: '';
+                                    font-size: 25px;
+                                    line-height: 64px;
+                                    text-align: center;
+                                    @include opacity('color', #000, .2);
+                                }
+    
+                                &:hover {
+    
+                                    &:before {
+                                        color: #000;
+                                    }
+                                }
+                            }
+    
+                            .swiper-button-prev {
+                                left: 0;
+    
+                                &:before {
+                                    content: '\E880';
+                                }
+                            }
+    
+                            .swiper-button-next {
+                                right: 0;
+    
+                                &:before {
+                                    content: '\E881';
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .popup-footer {
+                    position: relative;
+                    width: 100%;
+                    margin: 32px 0 0 0;
+                    padding: 32px 0 0 0;
+
+                    .rate {
+                        position: relative;
+                        width: 100%;
+                        
+                        p {
+                            margin: 0 0;
+                            font-size: 16px;
+                            line-height: 20px;
+                            text-align: center;
+                            font-weight: 700;
+                            width: 100%;
+                        }
+
+                        .stars {
+                            position: relative;
+                            width: 100%;
+                            margin: 16px 0 32px 0;
+                            text-align: center;
+
+                            i.star {
+                                display: inline-block;
+                                width: auto;
+                                margin: 0 8px;
+                                position: relative;
+                                width: 48px;
+                                height: 48px;
+                                @include vendor('transition', (
+                                    'all #{_duration(transition)} ease-in-out',
+                                ));
+
+                                &:before {
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    width: 100%;
+                                    height: 100%;
+                                    font-family: 'jec', sans-serif;
+                                    content: '\EDC6';
+                                    color: #E5E5E5;
+                                    font-size: 48px;
+                                    line-height: 38px;
+                                    font-style: normal;
+                                    @include vendor('transition', (
+                                        'color #{_duration(transition)} ease-in-out',
+                                    ));
+                                }
+
+                                &:hover {
+                                    cursor: pointer;
+
+                                    &:before {
+                                        color: #FFF700;
+                                        @include vendor('transition', (
+                                            'color #{_duration(transition)} ease-in-out',
+                                        ));
+                                    }
+                                }
+                            }
+                        }
+
+                        a.button-blue {
+                            width: 243px;
+                        }
+                    }
+
+                    .message-post {
+                        position: relative;
+                        margin: 16px 0 16px 0;
+
+                        textarea {
+                            height: 200px;
+                        }
+                    }
+
+                    &:before {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 1px;
+                        background: #E5E5E5;
+                        content: '';
+                    }
+                }
+            }
+
+            &.register-success {
+                width: 768px;
+                
+                .popup-message {
+
+                    a.button-blue {
+                        width: 200px;
+                        margin: 0 auto;
+    
+                        span {text-transform: none;}
+                    }
+                }
+            }
+
+            &.appointment-rate {
+                width: 768px;
+                height: 90%;
+                padding: 64px 64px 0 64px;
+            }
+
+            &.specialist-fillter {
+                height: 95%;
+                width: 768px;
+            }
+
+            &.hospital-gallery {
+                width: 90%;
+                height: 95%;
+
+                .popup-message {
+
+                    .popup-body {margin: 0 0;}
+                }
+            }
+
+            &:after {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 32px;
+                height: 120px;
+                background-color: $green;
+                @include set-border-radius(0, 25px, 25px, 0);
+                content: '';
+            }
+        }
+    }
+
+    @include breakpoint('<=medium') {
+
+        .wrapper-popup {
+            
+    
+            .popup-content {
+                padding: 56px;
+    
+                a.btn-close {
+                    width: 56px;
+                    height: 56px;
+    
+                    &:before {
+                        width: 56px;
+                        height: 56px;
+                        font-size: 18px;
+                        line-height: 56px;
+                    }
+                }
+
+                .popup-message {
+
+                    p {
+                        font-size: 15px;
+                        line-height: 25px;
+                    }
+                }
+    
+                &.register-success {
+                    width: 550px;
+                }
+                
+                &.appointment-rate {
+                    width: 90%;
+                    padding: 56px 56px 0 56px;
+                }
+
+                &:after {
+                    width: 32px;
+                    height: 100px;
+                }
+
+                &.specialist-fillter {
+                    width: 95%;
+                }
+            }
+        }
+    }
+
+    @include breakpoint('<=small') {
+
+        .wrapper-popup {
+            
+    
+            .popup-content {
+                padding: 48px;
+    
+                a.btn-close {
+                    width: 48px;
+                    height: 48px;
+    
+                    &:before {
+                        width: 48px;
+                        height: 46px;
+                        font-size: 16px;
+                        line-height: 48px;
+                    }
+                }
+
+                .popup-message {
+
+                    p {
+                        font-size: 14px;
+                        line-height: 24px;
+                    }
+                }
+    
+                &.register-success {
+                    width: 95%;
+                }
+                
+                &.appointment-rate {
+                    width: 90%;
+                    height: 90%;
+                    padding: 48px 48px 0 48px;
+                }
+
+                &:after {
+                    width: 32px;
+                    height: 80px;
+                }
+            }
+        }
+    }
+}

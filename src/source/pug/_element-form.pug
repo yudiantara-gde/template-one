@@ -1,0 +1,119 @@
+doctype html
+html(lang='en')
+    head
+        meta(charset='utf-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1, user-scalable=no')
+        title Welcome to Otto Touren
+        meta(name='description', content='')
+        include include-file/style.pug
+    body.is-preload
+        #wrapper.fade-in
+            .loader
+                .lds-ring
+                    div
+                    div
+                    div
+                    div
+            //header include
+            include include-file/header.pug
+
+            #main.element
+                .container
+                    h1 Basic Form Element
+                    h2 Text Input
+
+                    form.form()
+                        .row 
+                            .box 
+                                label.mandatory-right 
+                                    | here 
+                                    span *
+            
+            //footer include
+            include include-file/footer.pug
+        
+        //js include
+        include include-file/js.pug
+
+        //js inline
+        script(src='js/swiper.min.js')
+        script. 
+            var swiper = new Swiper('.heroes .swiper-container', {
+                spaceBetween: 0,
+                
+                //navigation
+                navigation: {
+                nextEl: '.heroes-next',
+                prevEl: '.heroes-prev',
+                },
+
+                //pagination
+                pagination: {
+                clickable: true,
+                    el: '.heroes-pagination',
+                },
+
+                //autoplay
+                autoplay: {
+                    delay: 2500,
+                },
+
+                //efect
+                //effect: 'fade',
+                
+                //lopping
+                loop: true,
+
+                //speed
+                speed: 1200,
+            });
+
+            //popular packages
+            var sc = new Swiper('.list-packages .swiper-container', {
+                slidesPerView: 1,
+                spaceBetween: 0,  
+
+                //pagination
+                pagination: {
+                    clickable: true,
+                    el: '.packages-pagination',
+                },
+
+                loop: true,
+                speed: 1000,
+
+                //breakpoint
+                breakpoints: {
+                    576: {
+                        slidesPerView: 2,
+                    },
+                    768: {
+                        slidesPerView: 3,
+                    }
+                }
+            });
+
+            //testimonial
+            var testimonial = new Swiper('.list-testimonial .swiper-container', {
+                slidesPerView: 1,
+                spaceBetween: 0,  
+
+                //pagination
+                pagination: {
+                    clickable: true,
+                    el: '.testimonial-pagination',
+                },
+
+                loop: true,
+
+                //breakpoint
+                breakpoints: {
+                    768: {
+                        slidesPerView: 3,
+                        activeIndex: 2,
+                        spaceBetween: 0,
+                    }
+                },
+                centeredSlides: true,
+                speed: 1000,
+            });

@@ -1,0 +1,7 @@
+step 1:
+
+    npm init
+
+step 2:
+
+    npm install --save-dev gulp gulp-autoprefixer gulp-postcss browser-sync gulp-sass pug gulp-pug gulp-concat gulp-uglify gulp-csso gulp-rename

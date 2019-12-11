@@ -1,0 +1,361 @@
+/* Pagination */
+
+ul {
+	padding: 0 0;
+	margin: 0 0 16px 0;
+	@include fonts($align: center);
+	list-style: none;
+
+	li {
+		width: auto;
+		height: auto;
+		@include position('relative');
+		@include pm('margin', $right: 8px);
+		@include pm('padding', 0, 0, 0, 0);
+		@include display(inline-block);
+		vertical-align: top;
+
+		a {
+			width: 32px;
+			height: 32px;
+			@include display(block);
+			@include position('relative');
+			@include fonts($opensans, 600, 14px, 24px, $align: center, $tt: uppercase);
+			color: $black;
+			@include border-radius(5px);
+			background-color: transparent;
+			@include pm('padding', $top: 4px, $bottom: 4px);
+			@include vendor('transition', (
+				'background-color .5s ease-in-out',
+				'color .5s ease-in-out'
+			));
+		}
+
+		//first li
+		&.first {
+
+			a {
+				color: transparent;
+				@include vendor('transition', (
+					'background-color .5s ease-in-out'
+				));
+
+				&:before {
+					@include position('absolute', $top: 4px, $left: 4px);
+					width: 24px;
+					height: 24px;
+					@include fonts($ico, 400, 14px, 24px, $align: center);
+					color: $black;
+					content: '\F100';
+					@include vendor('transition', (
+						'color .5s ease-in-out'
+					));
+				}
+			}
+		}
+
+		//prev
+		&.prev {
+			a {
+				color: transparent;
+				@include vendor('transition', (
+					'background-color .5s ease-in-out'
+				));
+
+				&:before {
+					@include position('absolute', $top: 4px, $left: 4px);
+					width: 24px;
+					height: 24px;
+					@include fonts($ico, 400, 14px, 24px, $align: center);
+					color: $black;
+					content: '\F104';
+					@include vendor('transition', (
+						'color .5s ease-in-out'
+					));
+				}
+			}
+		}
+
+		//next
+		&.next {
+			a {
+				color: transparent;
+				@include vendor('transition', (
+					'background-color .5s ease-in-out'
+				));
+
+				&:before {
+					@include position('absolute', $top: 4px, $left: 4px);
+					width: 24px;
+					height: 24px;
+					@include fonts($ico, 400, 14px, 24px, $align: center);
+					color: $black;
+					content: '\F105';
+					@include vendor('transition', (
+						'color .5s ease-in-out'
+					));
+				}
+			}
+		}
+
+		//last li
+		&.last {
+			a {
+				color: transparent;
+				@include vendor('transition', (
+					'background-color .5s ease-in-out'
+				));
+
+				&:before {
+					@include position('absolute', $top: 4px, $left: 4px);
+					width: 24px;
+					height: 24px;
+					@include fonts($ico, 400, 14px, 24px, $align: center);
+					color: $black;
+					content: '\F101';
+					@include vendor('transition', (
+						'color .5s ease-in-out'
+					));
+				}
+			}
+		}
+
+		//disable
+		&.disable {
+
+			a {
+				background-color: $gray-light;
+			}
+		}
+
+		//active and hover
+		&.active,
+		&:hover {
+			cursor: pointer;
+
+			a {
+				background-color: $primary;
+				color: $white;
+			}
+
+			&.first,
+			&.prev,
+			&.next,
+			&.last {
+				cursor: pointer;
+
+				a {
+					color: transparent;
+					background-color: $primary;
+
+					&:before {
+						color: $white;
+					}
+				}
+			}
+
+			&.disable {
+
+				a {
+					color: $black;
+					background-color: $gray-light;
+				}
+			}
+
+			&.first.disable,
+			&.prev.disable,
+			&.next.disable,
+			&.last.disable {
+				cursor: pointer;
+
+				a {
+					color: transparent;
+					background-color: $gray-light;
+
+					&:before {
+						color: $black;
+					}
+				}
+			}
+		}
+
+		//set margin bottom 0 in last class
+		&:last-of-type {
+			margin-right: 0;
+		}
+	}
+
+	&.left {
+		@include fonts($align: left);
+	}
+
+	&.right {
+		@include fonts($align: right);
+	}
+
+	@include breakpoint('<=small') {
+
+		li {
+			@include pm('margin', $right: 4px);
+
+			a {
+				width: 24px;
+				height: 24px;
+				@include fonts($fz: 12px, $lh: 22px, $align: center);
+				@include pm('padding', $top: 1px, $bottom: 1px);
+
+			}
+
+			&.first,
+			&.prev,
+			&.next,
+			&.last {
+
+				a {
+					width: 24px;
+					height: 24px;
+					@include pm('padding', $top: 0, $bottom: 0);
+
+					&:before {
+						@include position('absolute', $top: 0, $left: 0);
+					}
+				}
+			}
+		}
+
+		&.left,
+		&.right {
+			@include fonts($align: center);
+		}
+	}
+}
+
+.breadcrumb {
+	position: relative;
+	width: 100%;
+	margin: 32px 0 0 0;
+
+	.container {
+
+		ul {
+			padding: 0 0;
+			margin: 0 0;
+			@include float-pos;
+
+			li {
+				float: left;
+				padding: 0 0;
+				list-style: none;
+				margin: 0 8px 0 0;
+				padding-right: 32px;
+				position: relative;
+
+				a {
+					display: block;
+					width: 100%;
+					height: auto;
+					font-size: 16px;
+					line-height: 24px;
+					font-weight: 700;
+					color: $black;
+				}
+
+				&:after {
+					display: block;
+					position: absolute;
+					top: 0;
+					right: 0;
+					width: 24px;
+					height: 24px;
+					font-family: 'jec', sans-serif;
+					font-size: 12px;
+					line-height: 24px;
+					text-align: center;
+					color: $black;
+					content: '\F105';
+				}
+
+				&:first-of-type {
+					margin-left: 0;
+				}
+
+				&:last-of-type {
+					margin-right: 0;
+					padding-right: 0;
+
+					&:after {display: none;}
+				}
+
+				&.last-long {
+
+					a {
+						max-width: 200px;
+						overflow: hidden;
+						height: 24px;
+						position: relative;
+						padding-right: 13px;
+
+						&:after {
+							position: absolute;
+							top: 0;
+							right: 0;
+							height: 24px;
+							content: '...';
+							font-weight: 700;
+							font-size: 16px;
+							line-height: 24px;
+							color: $black;
+						}
+					}
+				}
+
+				&.txt-lowcase {
+
+					a {
+						text-transform: none;
+					}
+				}
+			}
+		}
+	}
+
+	@include breakpoint('<=medium') {
+
+		.container {
+
+			ul {
+
+				li {
+
+					a {
+						font-size: 14px;
+					}
+
+					&.last-long {
+						width: 200px;
+					}
+				}
+			}
+		}
+	}
+
+	@include breakpoint('<=small') {
+
+		.container {
+
+			ul {
+
+				li {
+
+					a {
+						font-size: 12px;
+					}
+
+					&.last-long {
+						width: 160px;
+					}
+				}
+			}
+		}
+	}
+}

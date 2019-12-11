@@ -1,0 +1,35 @@
+/* List */
+
+	ol {
+		list-style: decimal;
+		margin: 0 0;
+		padding: 0 0;
+
+		li {
+			padding-left: 24px;
+			position: relative;
+		}
+	}
+
+	ul {
+		list-style: none;
+		padding: 0 0;
+		margin: 0 0;
+
+		li {
+			padding-left: 24px;
+			position: relative;
+
+			&:before {
+				width: 8px;
+				height: 8px;
+				position: absolute;
+				top: 5px;
+				background: $black;
+				@include border-radius(50%);
+				margin: 0 0 16px 0;
+				text-align: left;
+				
+			}
+		}
+	}

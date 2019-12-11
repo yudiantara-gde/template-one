@@ -1,0 +1,271 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Form Element</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../css/main.css" />
+		<noscript><link rel="stylesheet" href="../css/noscript.css" /></noscript>
+	</head>
+	<body>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+				<div id="main">
+					<!-- header -->
+					<header id="header"></header>
+
+					<!-- main body -->
+					<div class="container">
+						<h1>Basic form Element</h1>
+						<h2>Text Input</h2>
+						<form class="form" style="padding: 32px 0">
+							<div class="row">
+								<div class="box">
+									<label class="mandatory-right">regular <span>*</span></label>
+									<input type="text">
+									<p class="message">
+										global form message here ...
+									</p>
+								</div>
+								<div class="box column-2">
+									<label class="mandatory-left"><span>*</span>text input with text place holder</label>
+									<input type="text" placeholder="place holder here ...">
+								</div>
+								<div class="box column-2">
+									<label>disable</label>
+									<input type="number" disabled>
+								</div>
+								<div class="box column-2 has-success">
+									<label>success</label>
+									<input type="text">
+									<p class="message success">input has success</p>
+								</div>
+								<div class="box column-2 has-error">
+									<label>error</label>
+									<input type="text">
+									<p class="message error">input has error</p>
+								</div>
+								<div class="box column-2 icon-left">
+									<label>with icon</label>
+									<input type="text" placeholder="text input with icon left">
+								</div>
+								<div class="box column-2 icon-right">
+									<label>with icon</label>
+									<input type="text" placeholder="text input with icon right">
+								</div>
+								<div class="box column-2">
+									<label>Textarea</label>
+									<textarea></textarea>
+								</div>
+								<div class="box column-2">
+									<label>Textarea Disable</label>
+									<textarea disabled></textarea>
+								</div>
+							</div>
+						</form>
+
+						<h2>Select</h2>
+						<form class="form" style="padding: 32px 0;">
+							<div class="row">
+								<div class="box column-2">
+									<label>Select (selectric)</label>
+									<select class="opt-selectric">
+										<option>-- pilih --</option>
+										<option>Pilihan 1</option>
+										<option>Pilihan 2</option>
+										<option>Pilihan 3</option>
+										<option>Pilihan 4</option>
+									</select>
+								</div>
+								<div class="box column-2">
+									<label>Select Disable (selectric)</label>
+									<select class="opt-selectric" disabled>
+										<option>-- pilih --</option>
+										<option>Pilihan 1</option>
+										<option>Pilihan 2</option>
+										<option>Pilihan 3</option>
+										<option>Pilihan 4</option>
+									</select>
+								</div>
+								<div class="box column-2">
+									<label>Select (select2)</label>
+									<select class="opt-select2">
+										<option>-- pilih --</option>
+										<option>Pilihan 1</option>
+										<option>Pilihan 2</option>
+										<option>Pilihan 3</option>
+										<option>Pilihan 4</option>
+									</select>
+								</div>
+								<div class="box column-2">
+									<label>Select Disable(select2)</label>
+									<select class="opt-select2" disabled>
+										<option>-- pilih --</option>
+										<option>Pilihan 1</option>
+										<option>Pilihan 2</option>
+										<option>Pilihan 3</option>
+										<option>Pilihan 4</option>
+									</select>
+								</div>
+							</div>
+						</form>
+
+						<h2>Checkbox</h2>
+						<form class="form" style="padding: 32px 0;">
+							<div class="row">
+								<div class="box column-2">
+									<div class="check-box">
+										<input type="checkbox" id="chk-1" value="unchecked">
+										<label for="chk-1">Unchecked</label>
+									</div>
+								</div>
+								<div class="box column-2">
+									<div class="check-box">
+										<input type="checkbox" id="chk-2" value="checked" checked>
+										<label for="chk-2">Checked</label>
+									</div>
+								</div>
+
+								<div class="box column-2">
+									<div class="check-box">
+										<input type="checkbox" id="chk-3" value="unchecked-disable" disabled>
+										<label for="chk-3">Unhecked Disable</label>
+									</div>
+								</div>
+
+								<div class="box column-2">
+									<div class="check-box">
+										<input type="checkbox" id="chk-4" value="unchecked-disable" checked disabled>
+										<label for="chk-4">Checked Disable</label>
+									</div>
+								</div>
+							</div>
+						</form>
+
+						<h2>Radio Button</h2>
+						<form class="form" style="padding: 32px 0;">
+							<div class="row">
+								<div class="box column-2">
+									<div class="radio-button">
+										<input type="radio" id="radio-1" value="radion-is-off" name="radio-button">
+										<label for="radio-1">Radio is Off</label>
+									</div>
+								</div>
+								<div class="box column-2">
+									<div class="radio-button">
+										<input type="radio" id="radio-2" value="radion-is-on" name="radio-button" checked>
+										<label for="radio-2">Radio is On</label>
+									</div>
+								</div>
+								<div class="box column-2">
+									<div class="radio-button">
+										<input type="radio" id="radio-3" value="radion-is-off-disable" name="radio-button" disabled>
+										<label for="radio-3">Radio is Off Disable</label>
+									</div>
+								</div>
+								<div class="box column-2">
+									<div class="radio-button">
+										<input type="radio" id="radio-4" value="radion-is-on-disable" name="radio-button" checked disabled>
+										<label for="radio-4">Radio is On Disable</label>
+									</div>
+								</div>
+							</div>
+						</form>
+
+						<h2>Button</h2>
+						<form class="form" style="padding: 32px 0;">
+							<div class="row">
+								<div class="box">
+									<label>Button Primary</label>
+									<button type="submit" class="btn-large primary"><span>Button Primary</span></button>
+									<button type="sumbit" class="btn primary"><span>Button Primary</span></button>
+									<button type="sumbit" class="btn-small primary"><span>Button Primary</span></button>
+								</div>
+								<div class="box">
+									<label>Button Primary with Icon</label>
+									<button type="submit" class="btn-large with-icon primary"><i class="icon user"></i><span>Button Primary</span></button>
+									<button type="sumbit" class="btn with-icon primary"><i class="icon user"></i><span>Button Primary</span></button>
+									<button type="sumbit" class="btn-small with-icon primary"><i class="icon user"></i><span>Button Primary</span></button>
+								</div>
+								<div class="box">
+									<label>Button Secondary</label>
+									<button type="submit" class="btn-large secondary"><span>Button Primary</span></button>
+									<button type="sumbit" class="btn secondary"><span>Button Primary</span></button>
+									<button type="sumbit" class="btn-small secondary"><span>Button Primary</span></button>
+								</div>
+								<div class="box">
+									<label>Button Secondary with Icon</label>
+									<button type="submit" class="btn-large with-icon secondary"><i class="icon user"></i><span>Button Primary</span></button>
+									<button type="sumbit" class="btn with-icon secondary"><i class="icon user"></i><span>Button Primary</span></button>
+									<button type="sumbit" class="btn-small with-icon secondary"><i class="icon user"></i><span>Button Primary</span></button>
+								</div>
+								<div class="box">
+									<label>Button Border Primary</label>
+									<button type="submit" class="btn-large-border primary"><span>Button Primary</span></button>
+									<button type="sumbit" class="btn-border primary"><span>Button Primary</span></button>
+									<button type="sumbit" class="btn-small-border primary"><span>Button Primary</span></button>
+								</div>
+								<div class="box">
+									<label>Button Border Primary with Icon</label>
+									<button type="submit" class="btn-large-border with-icon primary"><i class="icon user"></i><span>Button Primary</span></button>
+									<button type="sumbit" class="btn-border with-icon primary"><i class="icon user"></i><span>Button Primary</span></button>
+									<button type="sumbit" class="btn-small-border with-icon primary"><i class="icon user"></i><span>Button Primary</span></button>
+								</div>
+								<div class="box">
+									<label>Button Border Secondary</label>
+									<button type="submit" class="btn-large-border secondary"><span>Button Primary</span></button>
+									<button type="sumbit" class="btn-border secondary"><span>Button Primary</span></button>
+									<button type="sumbit" class="btn-small-border secondary"><span>Button Primary</span></button>
+								</div>
+								<div class="box">
+									<label>Button Border Secondary with Icon</label>
+									<button type="submit" class="btn-large-border with-icon secondary"><i class="icon user"></i><span>Button Primary</span></button>
+									<button type="sumbit" class="btn-border with-icon secondary"><i class="icon user"></i><span>Button Primary</span></button>
+									<button type="sumbit" class="btn-small-border with-icon secondary"><i class="icon user"></i><span>Button Primary</span></button>
+								</div>
+							</div>
+						</form>
+
+						<h2>Date</h2>
+						<form style="padding: 32px 0;">
+							<div class="row">
+								<div class="box column-2">
+									<span>Date Time</span>
+									<div class="date-time" id="box-date-start">
+										<input type="text" id="date-start">
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+
+				<!-- footer -->
+				<footer id="footer">
+					
+				</footer>
+			</div>
+
+		
+
+		<!-- Scripts -->
+			<script src="../js/jquery.min.js"></script>
+			<script src="../js/superfish.js"></script>
+			<script src="../js/jquery.slicknav.js"></script>
+			<script src="../js/main.js"></script>
+
+		<!-- js selectric && select-2 -->
+			<script src="../js/jquery.selectric.js"></script>
+			<script src="../js/select2.full.min.js"></script>
+
+		<!-- date time js -->
+			<script src="../js/picker.js"></script>
+			<script src="../js/picker.date.js"></script>
+
+		<!-- inline js -->
+			<script src="../js/js-inline/form.js"></script>
+	</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>Welcome to Otto Touren</title>
+    <meta name="description" content="">
+    <meta name="author" content="yudiantara.gde@gmail.com">
+    <link rel="stylesheet" href="css/main.css" type="text/css">
+    <noscript>
+      <link rel="stylesheet" href="css/noscript.css" type="text/css">
+    </noscript>
+  </head>
+  <body class="is-preload">
+    <div class="fade-in" id="wrapper">
+      <div class="loader">
+        <div class="lds-ring">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+      <!--header include-->
+      <header id="header">
+        <div class="container"><a class="logo"><img src="img/logo.png" alt="ottotouren" title="otto-touren"></a>
+          <div class="nav">
+            <ul class="sf-menu" id="nav-desktop">
+              <li><a href="">Packages</a></li>
+              <li><a href="">Transport</a></li>
+              <li><a href="">Contact Us</a></li>
+              <li><a class="nav-about" href="javascript:void(0)"> <span></span><span></span></a></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="element" id="main">
+        <div class="container">
+          <h1>Basic Form Element</h1>
+          <h2>Text Input</h2>
+          <form class="form">
+            <div class="row"> 
+              <div class="box"> 
+                <label class="mandatory-right">
+                   here <span>*</span></label>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <!--footer include-->
+      <footer id="footer">
+        <div class="container">
+          <div class="footer-info"><a class="logo" href=""><img src="img/logo.png"></a>
+            <p>copyright &copy; 2019 | all rights reserved.</p>
+          </div>
+          <div class="footer-nav">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href=""><i class="icon arrow-right"></i><span>about us</span></a></li>
+              <li><a href=""><i class="icon arrow-right"></i><span>our packages</span></a></li>
+              <li><a href=""><i class="icon arrow-right"></i><span>be our partner</span></a></li>
+              <li><a href=""><i class="icon arrow-right"></i><span>privacy & policy</span></a></li>
+              <li><a href=""><i class="icon arrow-right"></i><span>contac us</span></a></li>
+              <li><a href=""><i class="icon arrow-right"></i><span>travel blog and tips</span></a></li>
+              <li><a href=""><i class="icon arrow-right"></i><span>working with us</span></a></li>
+              <li><a href=""><i class="icon arrow-right"></i><span>terms & conditions</span></a></li>
+            </ul>
+          </div>
+          <div class="footer-social-media">
+            <h4>Find Us</h4><a href=""><i class="icon facebook"></i></a><a href=""><i class="icon twitter"></i></a><a href=""><i class="icon instagram"></i></a><a href=""><i class="icon whatsapp"></i></a><a href=""><i class="icon youtube"></i></a><a href=""><i class="icon tripadvisor"></i></a>
+          </div>
+          <div class="footer-copy"> 
+            <p>copyright &copy; 2019 | all rights reserved.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <!--js include-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/superfish.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/main.min.js"></script>
+    <!--js inline-->
+    <script src="js/swiper.min.js"></script>
+    <script>
+      var swiper = new Swiper('.heroes .swiper-container', {
+          spaceBetween: 0,
+          
+          //navigation
+          navigation: {
+          nextEl: '.heroes-next',
+          prevEl: '.heroes-prev',
+          },
+      
+          //pagination
+          pagination: {
+          clickable: true,
+              el: '.heroes-pagination',
+          },
+      
+          //autoplay
+          autoplay: {
+              delay: 2500,
+          },
+      
+          //efect
+          //effect: 'fade',
+          
+          //lopping
+          loop: true,
+      
+          //speed
+          speed: 1200,
+      });
+      
+      //popular packages
+      var sc = new Swiper('.list-packages .swiper-container', {
+          slidesPerView: 1,
+          spaceBetween: 0,  
+      
+          //pagination
+          pagination: {
+              clickable: true,
+              el: '.packages-pagination',
+          },
+      
+          loop: true,
+          speed: 1000,
+      
+          //breakpoint
+          breakpoints: {
+              576: {
+                  slidesPerView: 2,
+              },
+              768: {
+                  slidesPerView: 3,
+              }
+          }
+      });
+      
+      //testimonial
+      var testimonial = new Swiper('.list-testimonial .swiper-container', {
+          slidesPerView: 1,
+          spaceBetween: 0,  
+      
+          //pagination
+          pagination: {
+              clickable: true,
+              el: '.testimonial-pagination',
+          },
+      
+          loop: true,
+      
+          //breakpoint
+          breakpoints: {
+              768: {
+                  slidesPerView: 3,
+                  activeIndex: 2,
+                  spaceBetween: 0,
+              }
+          },
+          centeredSlides: true,
+          speed: 1000,
+      });
+    </script>
+  </body>
+</html>

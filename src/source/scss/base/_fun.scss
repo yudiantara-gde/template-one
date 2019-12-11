@@ -1,0 +1,308 @@
+//all function you need declare here
+
+//display
+@mixin display($display) {
+    display: $display;    
+}
+
+@mixin flex($flex-wrap: null, $flex-direction: null, $align: null, $justify: null) {
+    @include vendor('display', 'flex');   
+    flex-wrap: $flex-wrap;
+    flex-direction: $flex-direction;
+
+    @if ($align)  {
+        -webkit-box-align: $align;
+        -ms-flex-align: $align;
+        -webkit-align-items: $align;
+        align-items: $align;
+    }
+
+    @if ($justify) {
+        -webkit-box-pack: $justify;
+        -ms-flex-pack: $justify;
+        -webkit-justify-content: $justify;
+        justify-content: $justify;
+    }   
+}
+
+//position
+@mixin position($position, $top: null, $right: null, $bottom: null, $left: null) {
+    
+    @if $position == 'relative' {
+
+        position: relative;
+    }
+    
+    @else if $position == 'absolute' {
+
+        position: absolute;
+        
+        @if ($top)  {
+            top: $top;
+        }
+
+        @if ($right) {
+            right: $right;
+        }
+        
+        @if($bottom) {
+            bottom: $bottom;
+        }
+        
+        @if($left) {    
+            left: $left;
+        }
+    }
+
+    @else if($position == 'fixed') {
+
+        position: fixed;
+        
+        @if ($top)  {
+            top: $top;
+        }
+
+        @if ($right) {
+            right: $right;
+        }
+        
+        @if($bottom) {
+            bottom: $bottom;
+        }
+        
+        @if($left) {    
+            left: $left;
+        }
+    }
+}
+
+@mixin absolute-center {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+//float
+@mixin  float($float) {
+    float: $float;
+}
+
+@mixin float-pos() {
+
+	&:after {
+		content: '';
+		display: table;
+		clear: both;
+	}
+}
+
+//padding margin
+@mixin pm($pm, $top: null, $right: null, $bottom: null, $left: null) {
+    
+    //margin
+    @if $pm == 'margin' {
+
+        @if ($top)  {
+            margin-top: $top;
+        }
+
+        @if ($right) {
+            margin-right: $right;
+        }
+        
+        @if($bottom) {
+            margin-bottom: $bottom;
+        }
+        
+        @if($left) {    
+            margin-left: $left;
+        }
+    }
+
+    //padding
+    @else {
+        @if ($top)  {
+            padding-top: $top;
+        }
+
+        @if ($right) {
+            padding-right: $right;
+        }
+        
+        @if($bottom) {
+            padding-bottom: $bottom;
+        }
+        
+        @if($left) {    
+            padding-left: $left;
+        }
+    }
+}
+
+//fonts
+@mixin fonts($fonts:null, $fw: null, $fz: null, $lh: null, $align: null, $style: null, $spacing: null, $tt: null) {
+
+    //$fonts : font-family
+    @if($fonts) {
+        
+        font-family: $fonts;
+    }
+
+    //$fw : font-weight
+    @if($fw) {
+
+        font-weight: $fw;
+    }
+
+    //$fz : font-size
+    @if($fz) {
+
+        font-size: $fz;
+    }
+
+    //$lh : line-height
+    @if($lh) {
+
+        line-height: $lh;
+    }
+
+    //$align : text-align
+    @if($align) {
+        
+        text-align: $align;
+    }
+
+    //$style : font-style
+    @if($style) {
+
+        font-style: $style;
+    }
+
+    @else {
+
+        font-style: normal;
+    }
+
+    //$spacing : letter-spacing
+    @if($spacing) {
+
+        letter-spacing: $spacing;
+    }
+
+    //$tt : text-transform
+    @if($tt) {
+
+        text-transform: $tt;
+    }
+}
+
+//image position
+@mixin img($position: null, $fit: null, $ob: null) {
+    
+    //set position
+    @if($position) {
+
+        //position relative
+        @if $position == 'relative' {
+            
+            position: relative;
+        }
+
+        @else {
+
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+    //set object-fit: cover
+    @if($fit) {
+        
+        object-fit: cover;
+    }
+
+    //set object-position
+    @if($ob) {
+        
+        object-position: $ob;
+    }
+}
+
+//box shadow
+@mixin box-shadow ($x, $y, $blur, $spread, $rgba: false, $opacity: null) {
+
+    @if $rgba {
+        -webkit-box-shadow: $x $y $blur $spread rgba($rgba, $opacity);
+        -moz-box-shadow: $x $y $blur $spread rgba($rgba, $opacity);
+        box-shadow: $x $y $blur $spread rgba($rgba, $opacity);
+    }
+
+    @else {
+        box-shadow: none;
+    }
+}
+
+//clearfix
+@mixin clearfix() {
+	&::after {
+	  display: block;
+	  clear: both;
+	  content: "";
+	}
+}
+
+//border radius
+@mixin border-radius($radius) {
+	-webkit-border-radius: $radius;
+	   -moz-border-radius: $radius;
+		-ms-border-radius: $radius;
+			border-radius: $radius;
+}
+
+@mixin set-border-radius($top-left: null, $bottom-left: null, $top-right: null, $bottom-right: null) {
+
+    @if($top-left) {
+        -webkit-border-top-left-radius: $top-left;
+        -moz-border-radius-top-left: $top-left;
+        border-top-left-radius: $top-left;
+    }
+    @else {
+        -webkit-border-top-left-radius: 0;
+        -moz-border-radius-top-left: 0;
+        border-top-left-radius: 0;
+    }
+
+    @if($bottom-left) {
+        -webkit-border-bottom-left-radius: $bottom-left;
+        -moz-border-radius-bottom-left: $bottom-left;
+        border-bottom-left-radius: $bottom-left;
+    }
+    @else {
+        -webkit-border-bottom-left-radius: 0;
+        -moz-border-radius-bottom-left: 0;
+        border-bottom-left-radius: 0;
+    }
+
+    @if($top-right) {
+        -webkit-border-bottom-right-radius: $top-right;
+        -moz-border-radius-topright: $top-right;
+        border-top-right-radius: $top-right;
+    }
+    @else {
+        -webkit-border-bottom-right-radius: 0;
+        -moz-border-radius-topright: 0;
+        border-top-right-radius: 0;
+    }
+
+    @if($bottom-right) {
+        -webkit-border-top-right-radius: $bottom-right;
+        -moz-border-radius-bottomright: $bottom-right;
+        border-bottom-right-radius: $bottom-right;
+    }
+    @else {
+        -webkit-border-top-right-radius: 0;
+        -moz-border-radius-bottomright: 0;
+        border-bottom-right-radius: 0;
+    }  
+}
