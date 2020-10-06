@@ -1,0 +1,56 @@
+@import 'libs/vars';
+@import 'libs/functions';
+@import 'libs/mixins';
+@import 'libs/vendor';
+@import 'libs/breakpoints';
+@import 'libs/html-grid';
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,600,700,300i,600i,700i|Raleway:600,800');
+
+/*
+	Stater Kick with gulp, sass and pug
+	https://github.com/yudiantara-gde
+	Free for personal and commercial use under the CCA 3.0 license
+*/
+
+// Breakpoints.
+
+	@include breakpoints((
+		default		: (1400px,   null  ),
+		xlarge		: (1201px,   1400px ),
+		large		: (993px,    1200px),
+		medium		: (768px,    992px ),
+		small		: (577px,    767px ),
+		xsmall		: (481px,    576px ),
+		xxsmall		: (null,     480px )
+	));
+
+// Base.
+
+	@import 'base/reset';
+	@import 'base/page';
+	@import 'base/typography';
+
+// Component.
+
+	@import 'components/row';
+	@import 'components/box';
+	@import 'components/button';
+	//@import 'components/form';
+	@import 'components/icon';
+	@import 'components/image';
+	@import 'components/list';
+	@import 'components/actions';
+	@import 'components/icons';
+	@import 'components/table';
+	@import 'components/arrow';
+	@import 'components/gallery';
+	@import 'components/feature-icons';
+
+// Layout.
+
+	@import 'layout/wrapper';
+	@import 'layout/inner';
+
+
+//block
+	@import '../blocks/components/components.scss';

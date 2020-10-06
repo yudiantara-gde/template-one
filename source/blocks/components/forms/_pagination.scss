@@ -1,0 +1,86 @@
+// Pagination 
+.c-pagination {
+	position: relative;
+	width: 100%;
+	padding-top: 8px;
+
+	.w-pagination {
+		position: relative;
+		width: 100%;
+		text-align: center;
+
+		ul {
+			padding: 0 0;
+			margin: 0 0 0;
+			display: inline-block;
+			width: auto;
+			list-style: none;
+
+			li {
+				width: auto;
+				height: auto;
+				position: relative;
+				margin: 0 8px 0 0;
+				padding: 0 0;
+				position: relative;
+				vertical-align: top;
+
+				a {
+					width: 32px;
+					height: 32px;
+					display: block;
+					position: relative;
+					color: $black;
+					@include border-radius(5px);
+					background-color: transparent;
+					padding: 4px 0px;
+					@include vendor('transition', (
+						'background-color .5s ease-in-out',
+						'color .5s ease-in-out'
+					));
+				}
+			}
+		}
+
+		a.btn {
+			display: inline-block;
+			width: auto;
+			margin: 16px auto 0 auto;
+			height: 40px;
+			padding-top: 8px;
+			padding-bottom: 8px;
+
+			span {
+				text-transform: uppercase;
+				font-weight: 600;
+			}
+		}
+
+		.loader-pagination {
+			display: inline-block;
+			width: 48px;
+			height: 48px;
+
+			&:after {	
+				content: " ";
+				display: block;
+				width: 48px;
+				height: 48px;
+				margin: 0px;
+				border-radius: 50%;
+				border: 6px solid $primary;
+				border-color: $primary transparent $primary transparent;
+				animation: lds-dual-ring 1.2s linear infinite;
+			}
+		}
+		@keyframes lds-dual-ring {
+			0% {
+			  transform: rotate(0deg);
+			}
+
+			100% {
+			  transform: rotate(360deg);
+			}
+		}  
+	}
+}

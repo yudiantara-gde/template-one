@@ -1,0 +1,529 @@
+
+.side-search
+    form.form(action="")
+        .row
+            .box.has-icon
+                input(type="text" placeholder="search destination. ex. Kuta")
+                i.icon.target
+
+            .box.has-icon.check-in
+                input(type="text" placeholder="check in" id="check-in")
+                i.icon.date
+            
+            .box.has-icon.check-out
+                input(type="text" placeholder="check out" id="check-out")
+                i.icon.date
+            
+            .box
+                .select-box
+                    select.selectric 
+                        option(value="") how many adult
+                        option(value="") 1 Adult
+                        option(value="") 2 Adult
+                        option(value="") 3 Adult
+                        option(value="") 5 Adult
+                        option(value="") 6 Adult
+                        option(value="") 7 Adult
+                        option(value="") 8 Adult
+                        option(value="") 9 Adult
+                        option(value="") 10 Adult
+                        option(value="") More 10 Adult
+
+            .box
+                .select-box
+                    select.selectric 
+                        option(value="") with kids
+                        option(value="") 1 Kids
+                        option(value="") 2 Kids
+                        option(value="") 3 Kids
+                        option(value="") 4 Kids
+                        option(value="") More 4 Kids
+            
+            .box
+                button.btn.primary(type="submit")
+                    span search
+
+.side-filter
+    .w-side-filter
+        h5 Budget Anda 
+        
+        .content-filter
+
+            .box
+                .check-box
+                    input(type="checkbox", id="price-1", value="unchecked")
+                    label(for="price-1") 
+                        | $0 -  $55 / Night 
+                        span.count (10)
+
+            .box
+                .check-box
+                    input(type="checkbox", id="price-2", value="unchecked")
+                    label(for="price-2") 
+                        | $56 -  $111 / Night 
+                        span.count (10)
+
+            .box
+                .check-box
+                    input(type="checkbox", id="price-3", value="unchecked")
+                    label(for="price-3") 
+                        | $112 -  $168 / Night 
+                        span.count (10)
+
+            .box
+                .check-box
+                    input(type="checkbox", id="price-4", value="unchecked")
+                    label(for="price-4") 
+                        | $169 -  $225 / Night 
+                        span.count (10)
+
+            .box
+                .check-box
+                    input(type="checkbox", id="price-5", value="unchecked")
+                    label(for="price-5") 
+                        | $226 + / Night 
+                        span.count (10)
+
+.side-filter
+    .w-side-filter
+        h5 Pilihan Tempat Tidur
+
+        .content-filter
+            .box
+                .check-box
+                    input(type="checkbox", id="twin-bed", value="unchecked")
+                    label(for="twin-bed")
+                        | Twin
+                        span.count (10)
+
+            .box
+                .check-box
+                    input(type="checkbox", id="double-bed", value="unchecked")
+                    label(for="double-bed")
+                        | Double
+                        span.count (10)
+    
+.side-filter
+    .w-side-filter
+        h5 Nilai Bintang
+        
+        .content-filter
+            .box
+                .check-box
+                    input(type="checkbox", id="stars-1", value="unchecked")
+                    label(for="stars-1") 
+                        | Bintang 1
+                        span.count (10)
+            .box
+                .check-box
+                    input(type="checkbox", id="stars-2", value="unchecked")
+                    label(for="stars-2") 
+                        | Bintang 2
+                        span.count (10)
+            .box
+                .check-box
+                    input(type="checkbox", id="stars-3", value="unchecked")
+                    label(for="stars-3") 
+                        | Bintang 3
+                        span.count (10)
+            .box
+                .check-box
+                    input(type="checkbox", id="stars-4", value="unchecked")
+                    label(for="stars-4") 
+                        | Bintang 4
+                        span.count (10)
+            .box
+                .check-box
+                    input(type="checkbox", id="stars-5", value="unchecked")
+                    label(for="stars-5") 
+                        | Bintang 5
+                        span.count (10)
+            .box
+                .check-box
+                    input(type="checkbox", id="stars-0", value="unchecked")
+                    label(for="stars-0") 
+                        | Tanpa Bintang
+                        span.count (10)
+    
+.side-filter
+    .w-side-filter
+        h5 Kebijakan Reservasi
+
+        .content-filter
+            .box
+                .check-box
+                    input(type="checkbox", id="kb-1", value="unchecked")
+                    label(for="kb-1") 
+                        | Pembatalan Gratis
+                        span.count (10)
+            .box
+                .check-box
+                    input(type="checkbox", id="kb-2", value="unchecked")
+                    label(for="kb-2") 
+                        | Pesan tanpa kartu kredit
+                        span.count (10)
+            .box
+                .check-box
+                    input(type="checkbox", id="kb-2", value="unchecked")
+                    label(for="kb-2") 
+                        | Tanpa Pembayaran di Muka
+                        span.count (10)
+    
+.side-filter
+    .w-side-filter
+        h5 Makanan
+
+        .content-filter
+            .box
+                .check-box
+                    input(type="checkbox", id="eat-1", value="unchecked")
+                    label(for="eat-1") 
+                        | Termasuk Sarapan
+                        span.count (10)
+            .box
+                .check-box
+                    input(type="checkbox", id="eat-2", value="unchecked")
+                    label(for="eat-2") 
+                        | Termasuk Tiga Kali Makan
+                        span.count (10)
+            .box
+                .check-box
+                    input(type="checkbox", id="eat-3", value="unchecked")
+                    label(for="eat-3") 
+                        | Paket Inklusif
+                        span.count (10)
+            .box
+                .check-box
+                    input(type="checkbox", id="eat-4", value="unchecked")
+                    label(for="eat-4") 
+                        | Termasuk Sarapan & Makan Malam
+                        span.count (10)
+            .box
+                .check-box
+                    input(type="checkbox", id="eat-5", value="unchecked")
+                    label(for="eat-5") 
+                        | Dapur Lengkap
+                        span.count (10)
+    
+.side-filter
+    .w-side-filter
+        h5 Tipe Akomodasi
+
+        .content-filter
+            .box
+                .check-box
+                    input(type="checkbox", id="guest-house", value="unchecked")
+                    label(for="guest-house") 
+                        | Guest House
+                        span.count (10)
+            .box
+                .check-box
+                    input(type="checkbox", id="villa", value="unchecked")
+                    label(for="villa") 
+                        | Villa
+                        span.count (10)
+            .box
+                .check-box
+                    input(type="checkbox", id="hotel", value="unchecked")
+                    label(for="hotel") 
+                        | Hotel
+                        span.count (10)
+            .box
+                .check-box
+                    input(type="checkbox", id="homestay", value="unchecked")
+                    label(for="homestay") 
+                        | Homestay
+                        span.count (10)
+            .box
+                .check-box
+                    input(type="checkbox", id="resort", value="unchecked")
+                    label(for="resort") 
+                        | Resor
+                        span.count (10)
+            .box
+                .check-box
+                    input(type="checkbox", id="holiday-park", value="unchecked")
+                    label(for="holiday-park") 
+                        | Holiday Park
+                        span.count (10)
+            .box
+                .check-box
+                    input(type="checkbox", id="bed-breakfast", value="unchecked")
+                    label(for="bed-beakfast") 
+                        | Bed & Breakfast
+                        span.count (10)
+            .box
+                .check-box
+                    input(type="checkbox", id="hostel", value="unchecked")
+                    label(for="hostel") 
+                        | Hostel
+                        span.count (10)
+            .box
+                .check-box
+                    input(type="checkbox", id="losmen", value="unchecked")
+                    label(for="losmen") 
+                        | Losmen
+                        span.count (10)
+            .box
+                .check-box
+                    input(type="checkbox", id="apartement", value="unchecked")
+                    label(for="apartement") 
+                        | Apartement
+                        span.count (10)
+            .box
+                .check-box
+                    input(type="checkbox", id="rumah-liburan", value="unchecked")
+                    label(for="rumah-liburan") 
+                        | Rumah Liburan
+                        span.count (10)
+
+.filter
+    .w-filter
+        .filter-title
+            h4 Filter By
+        .tabs-filter
+            ul
+                li: a(href="#budget") 
+                    span Budget Anda
+                li: a(href="#bed") 
+                    span Pilihan Tempat Tidur
+                li: a(href="#star")
+                    span Nilai Bintang
+                li: a(href="#reservation") 
+                    span Kebijakan Reservasi
+                li: a(href="#food")
+                    span Makanan
+                li: a(href="#accomodation")
+                    span Tipe Akomodasi
+
+                a.btn.primary.act(href='') 
+                    span Filter 
+            
+            #budget.c-filter
+                .content-filter
+
+                    .box
+                        .check-box
+                            input(type="checkbox", id="m-price-1", value="unchecked")
+                            label(for="m-price-1") 
+                                | $0 -  $55 / Night 
+                                span.count (10)
+
+                    .box
+                        .check-box
+                            input(type="checkbox", id="m-price-2", value="unchecked")
+                            label(for="m-price-2") 
+                                | $56 -  $111 / Night 
+                                span.count (10)
+
+                    .box
+                        .check-box
+                            input(type="checkbox", id="m-price-3", value="unchecked")
+                            label(for="m-price-3") 
+                                | $112 -  $168 / Night 
+                                span.count (10)
+
+                    .box
+                        .check-box
+                            input(type="checkbox", id="m-price-4", value="unchecked")
+                            label(for="m-price-4") 
+                                | $169 -  $225 / Night 
+                                span.count (10)
+
+                    .box
+                        .check-box
+                            input(type="checkbox", id="m-price-5", value="unchecked")
+                            label(for="m-price-5") 
+                                | $226 + / Night 
+                                span.count (10)
+
+            #bed.c-filter
+                .content-filter
+                    .box
+                        .check-box
+                            input(type="checkbox", id="m-twin-bed", value="unchecked")
+                            label(for="m-twin-bed")
+                                | Twin
+                                span.count (10)
+
+                    .box
+                        .check-box
+                            input(type="checkbox", id="m-double-bed", value="unchecked")
+                            label(for="m-double-bed")
+                                | Double
+                                span.count (10)
+            
+            #star.c-filter
+                .content-filter
+                    .box
+                        .check-box
+                            input(type="checkbox", id=m-"m-stars-1", value="unchecked")
+                            label(for="m-stars-1") 
+                                | Bintang 1
+                                span.count (10)
+                    .box
+                        .check-box
+                            input(type="checkbox", id="m-stars-2", value="unchecked")
+                            label(for="m-stars-2") 
+                                | Bintang 2
+                                span.count (10)
+                    .box
+                        .check-box
+                            input(type="checkbox", id="m-stars-3", value="unchecked")
+                            label(for="m-stars-3") 
+                                | Bintang 3
+                                span.count (10)
+                    .box
+                        .check-box
+                            input(type="checkbox", id="m-stars-4", value="unchecked")
+                            label(for="m-stars-4") 
+                                | Bintang 4
+                                span.count (10)
+                    .box
+                        .check-box
+                            input(type="checkbox", id="m-stars-5", value="unchecked")
+                            label(for="m-stars-5") 
+                                | Bintang 5
+                                span.count (10)
+                    .box
+                        .check-box
+                            input(type="checkbox", id="m-stars-0", value="unchecked")
+                            label(for="m-stars-0") 
+                                | Tanpa Bintang
+                                span.count (10)
+                
+            #reservation.c-filter
+                .content-filter
+                    .box
+                        .check-box
+                            input(type="checkbox", id="m-eat-1", value="unchecked")
+                            label(for="m-eat-1") 
+                                | Termasuk Sarapan
+                                span.count (10)
+                    .box
+                        .check-box
+                            input(type="checkbox", id="m-eat-2", value="unchecked")
+                            label(for="m-eat-2") 
+                                | Termasuk Tiga Kali Makan
+                                span.count (10)
+                    .box
+                        .check-box
+                            input(type="checkbox", id="m-eat-3", value="unchecked")
+                            label(for="m-eat-3") 
+                                | Paket Inklusif
+                                span.count (10)
+                    .box
+                        .check-box
+                            input(type="checkbox", id="m-eat-4", value="unchecked")
+                            label(for="m-eat-4") 
+                                | Termasuk Sarapan & Makan Malam
+                                span.count (10)
+                    .box
+                        .check-box
+                            input(type="checkbox", id="m-eat-5", value="unchecked")
+                            label(for="m-eat-5") 
+                                | Dapur Lengkap
+                                span.count (10)
+            
+            #food.c-filter
+                .content-filter
+                    .box
+                        .check-box
+                            input(type="checkbox", id="m-eat-1", value="unchecked")
+                            label(for="m-eat-1") 
+                                | Termasuk Sarapan
+                                span.count (10)
+                    .box
+                        .check-box
+                            input(type="checkbox", id="m-eat-2", value="unchecked")
+                            label(for="m-eat-2") 
+                                | Termasuk Tiga Kali Makan
+                                span.count (10)
+                    .box
+                        .check-box
+                            input(type="checkbox", id="m-eat-3", value="unchecked")
+                            label(for="m-eat-3") 
+                                | Paket Inklusif
+                                span.count (10)
+                    .box
+                        .check-box
+                            input(type="checkbox", id="m-eat-4", value="unchecked")
+                            label(for="m-eat-4") 
+                                | Termasuk Sarapan & Makan Malam
+                                span.count (10)
+                    .box
+                        .check-box
+                            input(type="checkbox", id="m-eat-5", value="unchecked")
+                            label(for="m-eat-5") 
+                                | Dapur Lengkap
+                                span.count (10)
+            
+            #accomodation.c-filter
+                .content-filter
+                    .box
+                        .check-box
+                            input(type="checkbox", id="m-guest-house", value="unchecked")
+                            label(for="m-guest-house") 
+                                | Guest House
+                                span.count (10)
+                    .box
+                        .check-box
+                            input(type="checkbox", id="m-villa", value="unchecked")
+                            label(for="m-villa") 
+                                | Villa
+                                span.count (10)
+                    .box
+                        .check-box
+                            input(type="checkbox", id="m-hotel", value="unchecked")
+                            label(for="m-hotel") 
+                                | Hotel
+                                span.count (10)
+                    .box
+                        .check-box
+                            input(type="checkbox", id="m-homestay", value="unchecked")
+                            label(for="m-homestay") 
+                                | Homestay
+                                span.count (10)
+                    .box
+                        .check-box
+                            input(type="checkbox", id="m-resort", value="unchecked")
+                            label(for="m-resort") 
+                                | Resor
+                                span.count (10)
+                    .box
+                        .check-box
+                            input(type="checkbox", id="m-holiday-park", value="unchecked")
+                            label(for="m-holiday-park") 
+                                | Holiday Park
+                                span.count (10)
+                    .box
+                        .check-box
+                            input(type="checkbox", id="m-bed-breakfast", value="unchecked")
+                            label(for="m-bed-beakfast") 
+                                | Bed & Breakfast
+                                span.count (10)
+                    .box
+                        .check-box
+                            input(type="checkbox", id="m-hostel", value="unchecked")
+                            label(for="m-hostel") 
+                                | Hostel
+                                span.count (10)
+                    .box
+                        .check-box
+                            input(type="checkbox", id="m-losmen", value="unchecked")
+                            label(for="m-losmen") 
+                                | Losmen
+                                span.count (10)
+                    .box
+                        .check-box
+                            input(type="checkbox", id="m-apartement", value="unchecked")
+                            label(for="m-apartement") 
+                                | Apartement
+                                span.count (10)
+                    .box
+                        .check-box
+                            input(type="checkbox", id="m-rumah-liburan", value="unchecked")
+                            label(for="m-rumah-liburan") 
+                                | Rumah Liburan
+                                span.count (10)
+                

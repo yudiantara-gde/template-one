@@ -1,0 +1,19 @@
+///
+/// Stater Kick with gulp, sass and pug
+/// https://github.com/yudiantara-gde
+/// Free for personal and commercial use under the CCA 3.0 license
+///
+
+/* Wrapper */
+
+	#wrapper {
+		width: 100%;
+		max-width: 100%;
+
+		#main {
+			position: relative;
+			background-color: _palette(bg);
+			width: 100%;
+			z-index: 2;
+		}
+	}

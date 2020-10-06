@@ -1,0 +1,461 @@
+#wrapper {
+
+    .popup {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 99;
+        background: rgba($color: #000000, $alpha: .6);
+
+        .wrp-popup {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            @include vendor('transform', 'translate(-50%, -50%)');
+
+            .c-popup {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                display: block;
+                padding: 48px;
+                @include border-radius(3px);
+                background: $white;
+                overflow: hidden;
+
+                .btn-close {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    width: 48px;
+                    height: 48px;
+                    background: $primary;
+                    @include set-border-radius(0, 3px, 3px, 0);
+
+                    a {
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                        padding: 12px;
+                        color: $white;
+
+                        i.icon {
+                            width: 24px;
+                            height: 24px;
+                            display: block;
+                            padding: 0 0;
+                            color: $white;
+                        }
+                    }
+                }
+
+                .wrp-content {
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
+                    display: block;
+
+                    .c-title {
+                        position: relative;
+                        width: 100%;
+                        margin-bottom: 16px;
+
+                        h4 {
+                            position: relative;
+                            width: 100%;
+                            text-align: left;
+                            margin: 0 0;
+                        }
+                    }
+
+                    .c-promo {
+                        position: relative;
+                        width: 100%;
+                        height: 100%;
+                        display: block;
+
+                        .row {
+                            margin: 0 -12px;
+
+                            .promo {
+                                width: 25%;
+                                position: relative;
+                                padding: 0 12px;
+                                margin: 12px 0;
+
+                                .wrp-promo {
+                                    display: block;
+                                    position: relative;
+                                    width: 100%;
+                                    height: 100%;
+                                    background: $gray-light;
+                                    @include set-border-radius(0, 3px, 0, 3px);
+                                    text-align: center;
+
+                                    .wrp-img {
+                                        position: relative;
+                                        width: 100%;
+                                        padding-top: calc((1 / 2) * 100%);
+                                        overflow: hidden;
+
+                                        img {
+                                            display: block;
+                                            position: absolute;
+                                            top: 0;
+                                            left: 0;
+                                            width: 100%;
+                                            height: 100%;
+                                            object-fit: cover;
+                                            object-position: center;
+                                        }
+                                    }
+
+                                    p {
+                                        position: relative;
+                                        width: 100%;
+                                        padding: 0 8px;
+                                        margin: 8px 0;
+                                        text-align: center;
+
+                                        b {
+                                            font-size: 14px;
+                                            line-height: 24px;
+                                        }
+                                    }
+
+                                    a {
+                                        display: inline-block;
+                                        width: auto;
+                                        margin: 0 0 16px 0;
+                                        height: 40px;
+                                        padding: 8px 8px;
+
+                                        span {
+                                            font-size: 14px;
+                                            font-weight: 600;
+                                            text-transform: uppercase;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.promo {
+                max-width: 1200px;
+                max-height: 90%;
+            }
+        }
+
+        //search popup
+        &.search {
+
+            .wrp-popup {
+                width: 700px;
+                height: auto;
+
+                .c-popup {
+                    padding-top: 64px;
+                    padding-right: 16px;
+                    padding-bottom: 16px;
+                    padding-left: 16px;
+
+                    .wrp-content {
+
+                        .search-form {
+                            position: relative;
+                            width: 100%;
+
+                            .form,
+                            form {
+                                position: relative;
+                                width: 100%;
+
+                                .row {
+
+                                    .box {
+                                        padding-bottom: 0;
+
+                                        input[type="text"] {
+                                            padding-right: calc(100px + 16px);
+                                        }
+
+                                        .btn {
+                                            position: absolute;
+                                            top: 0;
+                                            right: 8px;
+                                            width: 100px;
+                                            margin-bottom: 0;
+
+                                            span {
+                                                font-weight: 600;
+                                                text-transform: uppercase;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @include breakpoint('<=xlarge') {
+
+        .popup {
+    
+            .wrp-popup {
+    
+                .c-popup {
+                    padding: 48px;
+    
+                    .btn-close {
+                        width: 48px;
+                        height: 48px;
+    
+                        a {
+                            padding: 12px;
+                        }
+                    }
+    
+                    .wrp-content {
+    
+                        .c-promo {
+    
+                            .row {
+                                margin: 0 -12px;
+    
+                                .promo {
+                                    width: 25%;
+                                    padding: 0 12px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &.promo {
+                    max-width: 1000px;
+                }
+            }
+        }
+    }
+
+    @include breakpoint('<=large') {
+
+        .popup {
+    
+            .wrp-popup {
+    
+                .c-popup {
+                    padding: 48px;
+    
+                    .btn-close {
+                        width: 48px;
+                        height: 48px;
+    
+                        a {
+                            padding: 12px;
+                        }
+                    }
+    
+                    .wrp-content {
+    
+                        .c-promo {
+    
+                            .row {
+                                margin: 0 -12px;
+    
+                                .promo {
+                                    width: 25%;
+                                    padding: 0 12px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &.promo {
+                    max-width: 90%;
+                    max-height: 90%;
+                }
+            }
+        }
+    }
+
+    @include breakpoint('<=medium') {
+
+        .popup {
+    
+            .wrp-popup {
+    
+                .c-popup {
+                    padding: 32px;
+    
+                    .btn-close {
+                        width: 32px;
+                        height: 32px;
+    
+                        a {
+                            padding: 4px;
+                        }
+                    }
+    
+                    .wrp-content {
+    
+                        .c-promo {
+    
+                            .row {
+                                margin: 0 -12px;
+    
+                                .promo {
+                                    width: 33.33%;
+                                    padding: 0 12px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+             //search popup
+            &.search {
+
+                .wrp-popup {
+                    width: 90%;
+                    height: auto;
+
+                    .c-popup {
+                        padding-top: 48px;
+                    }
+                }
+            }
+        }
+    }
+
+    @include breakpoint('<=small') {
+
+        .popup {
+    
+            .wrp-popup {
+    
+                .c-popup {
+                    padding: 24px 16px;
+    
+                    .btn-close {
+                        width: 24px;
+                        height: 24px;
+    
+                        a {
+                            padding: 0px;
+                        }
+                    }
+    
+                    .wrp-content {
+    
+                        .c-promo {
+    
+                            .row {
+                                margin: 0 -12px;
+    
+                                .promo {
+                                    width: 50%;
+                                    padding: 0 12px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &.promo {
+                    max-width: 95%;
+                    max-height: 95%;
+                }
+            }
+
+            //search popup
+           &.search {
+
+               .wrp-popup {
+
+                   .c-popup {
+                       padding-top: 32px;
+                   }
+               }
+           }
+        }
+    }
+
+    @include breakpoint('<=small') {
+
+        .popup {
+    
+            .wrp-popup {
+    
+                .c-popup {
+                    padding: 24px 8px;
+    
+                    .wrp-content {
+    
+                        .c-promo {
+    
+                            .row {
+                                margin: 0 -12px;
+    
+                                .promo {
+                                    width: 50%;
+                                    padding: 0 12px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &.promo {
+                    max-width: 95%;
+                    max-height: 95%;
+                }
+            }
+        }
+    }
+
+    
+
+    @include breakpoint('<=xsmall') {
+
+        .popup {
+    
+            .wrp-popup {
+    
+                .c-popup {
+    
+                    .wrp-content {
+    
+                        .c-promo {
+    
+                            .row {
+    
+                                .promo {
+                                    width: 100%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.simplebar-track.simplebar-horizontal {display: none !important;}

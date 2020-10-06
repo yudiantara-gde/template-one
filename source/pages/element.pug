@@ -1,0 +1,26 @@
+extends template/default
+
+block variables
+	- var meta_sitename = 'Stater Kicks with gulp, sass, and pug - http://yudiantara-gde.github.io/'
+	- var meta_title 	= 'Stater Kicks with gulp, sass, and pug'
+	- var meta_desc  	= 'Front End Stater Kick build using gulp, sass and pug'
+	- var meta_keyword 	= 'stater kick, stater kick using pug'
+	- var meta_url		= 'http://localhost:3000/index.html'
+	- var meta_img		= 'http://localhost:3000/img/logo.png'
+	- var pageClass 	= ''
+	- var header    	= ''
+
+block content
+	//ex : include component
+	//include ../blocks/components/heroes/home-slider-search
+	section
+		.inner
+			h2 Form Element
+			form(action="#" method="post")
+				.fields
+					.field
+						input(type="text" name="input-text" id="input-text")
+					.field
+						input(type="email" name="input-email" id="input-email")
+
+block script
